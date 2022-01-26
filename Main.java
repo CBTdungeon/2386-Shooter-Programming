@@ -1,10 +1,18 @@
 public class Main {
+
     public static void main(String[] args) {
 
-        double S_value = Trajectory.S_value(8.23);
-        System.out.println(S_value);
+        double Distance = 8.23;
 
-        double Angle = Trajectory.Angle(8.23, 2.64, S_value);
-        System.out.println(Angle);
+        double Height = 2.64;
+
+        double S_value = Trajectory.S_value(Distance);
+        System.out.println("the S value is: "+ S_value);
+
+        double Angle = Trajectory.Angle(Distance, Height, S_value);
+        System.out.println("the Angle to shoot is: "+ Angle);
+
+        double Velocity = Trajectory.Velocity(8.23,Angle,2.64);
+        System.out.println("the velocity of the ball is: "+ Velocity);
     }
 }
