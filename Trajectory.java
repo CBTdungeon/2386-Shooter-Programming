@@ -1,14 +1,14 @@
 public class Trajectory {
 
-    public static double S_value(double distance) {
+    public static double sValue(double distance) {
 
-        double S_va = 0.354*Math.pow(distance,2)+3.4*distance-88.8;
-        return S_va;
+        double sValue = 0.354*Math.pow(distance,2)+3.4*distance-88.8;
+        return sValue;
     }
 
-    public static double Angle(double distance, double height, double S_value) {
+    public static double Angle(double distance, double height, double sValue) {
 
-        double t1 = Math.tan(Math.toRadians(S_value))* distance - (2*height);
+        double t1 = Math.tan(Math.toRadians(sValue))* distance - (2*height);
         double t2 = t1/(-1*distance);
         double t3 = Math.atan((t2));
         double angle = Math.toDegrees(t3);
