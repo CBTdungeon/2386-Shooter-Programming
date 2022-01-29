@@ -17,7 +17,7 @@ public class Trajectory {
 
     public static double Velocity(double distance, double angle, double height) {
 
-        double t1 = -9.8*Math.pow(distance,2)*(1+Math.pow(Math.tan(Math.toRadians(angle)),2));
+        double t1 = -9.81*Math.pow(distance,2)*(1+Math.pow(Math.tan(Math.toRadians(angle)),2));
         double t2 = t1/(2*height - 2* distance * Math.tan(Math.toRadians(angle)));
         double Velocity = Math.sqrt(t2);
         return Velocity;
